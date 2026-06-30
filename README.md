@@ -1,36 +1,207 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏋️ FitVerse
 
-## Getting Started
+FitVerse is a full-stack fitness and trainer booking platform where users can discover fitness classes, book sessions securely using Stripe, interact through a community forum, and apply to become trainers. The platform also includes role-based dashboards for Users, Trainers, and Admins with dedicated management features.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+
+* **Client:** https://fitverse-client-delta.vercel.app
+* **Server:** https://fitverse-server.onrender.com
+
+---
+
+## ✨ Features
+
+### Authentication
+
+* Email & Password authentication
+* Google Sign-In
+* JWT Authentication using HTTP-only Cookies
+* Protected Routes
+* Role-Based Access Control (User, Trainer, Admin)
+
+### User Features
+
+* Browse available fitness classes
+* View class details
+* Book classes with Stripe payment
+* Save favorite classes
+* View booking history
+* Apply to become a trainer
+* Participate in the community forum
+
+### Trainer Features
+
+* Dashboard overview
+* Add new fitness classes
+* View personal forum posts
+* Manage trainer content
+
+### Admin Features
+
+* Dashboard overview with platform statistics
+* Manage users
+* Promote users to Admin
+* Manage classes
+* View transaction history
+
+### Community Forum
+
+* Create forum posts
+* Upvote and downvote posts
+* Comment system
+* Reply to comments
+* Edit and delete own comments
+
+### Payment System
+
+* Secure payments using Stripe
+* Booking created only after successful payment
+* Transaction records
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* Tailwind CSS
+* DaisyUI
+* Axios
+* React Hook Form
+* Firebase Authentication (Google Login)
+* Stripe React SDK
+* Sonner
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* JWT Authentication
+* Stripe
+* Bcrypt
+* Cookie Parser
+* CORS
+
+---
+
+## 📂 Project Structure
+
+### Client
+
+* Next.js App Router
+* Protected Routes
+* Dashboard Layout
+* Reusable Components
+* API Service Layer
+
+### Server
+
+* Express REST API
+* MongoDB Collections
+* JWT Authentication
+* Role-based Middleware
+* Stripe Payment Integration
+
+---
+
+## 📦 Installation
+
+### Clone the repositories
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/segfaulted11/fitverse-server
+
+git clone https://github.com/segfaulted11/fitverse-client
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Client Setup
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+cd client
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm install
 
-## Learn More
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Server Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+npm install
 
-## Deploy on Vercel
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔑 Environment Variables
+
+### Client
+
+```env
+NEXT_PUBLIC_API_URL=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+
+NEXT_PUBLIC_FIREBASE_API_KEY=
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+NEXT_PUBLIC_FIREBASE_APP_ID=
+```
+
+### Server
+
+```env
+PORT=
+
+CLIENT_URL=
+
+MONGODB_URI=
+DB_NAME=
+
+JWT_SECRET=
+
+STRIPE_SECRET_KEY=
+```
+
+---
+
+## 📚 Main Packages Used
+
+### Client
+
+* next
+* react
+* axios
+* react-hook-form
+* firebase
+* @stripe/react-stripe-js
+* @stripe/stripe-js
+* sonner
+* tailwindcss
+* daisyui
+
+### Server
+
+* express
+* mongodb
+* bcrypt
+* jsonwebtoken
+* stripe
+* cors
+* cookie-parser
+* dotenv
+
+---
+
+## 👨‍💻 Author
+
+Developed as a full-stack fitness booking platform using the MERN ecosystem with Next.js for the frontend and Express + MongoDB for the backend.
